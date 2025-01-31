@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f8fad98d414b6e76b3cad63a981e25e",
+    "content-hash": "3f67133ef0e1564d87d37b02213e4632",
     "packages": [
         {
             "name": "brick/math",
@@ -580,6 +580,81 @@
                 }
             ],
             "time": "2023-10-12T05:21:21+00:00"
+        },
+        {
+            "name": "fusionphp/fusion",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../duo",
+                "reference": "69c26ba4ac8efc3e9a370b8f5593713e97a5f738"
+            },
+            "require": {
+                "illuminate/console": "^11",
+                "illuminate/process": "^11",
+                "illuminate/support": "^11",
+                "inertiajs/inertia-laravel": "^2.0",
+                "laravel/framework": "^11",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "nikic/php-parser": "^5.4",
+                "orchestra/testbench": "^9.5",
+                "phpunit/phpunit": "^10.5|^11"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Fusion\\Providers\\FusionServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fusion\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "files": [
+                    "functions.php"
+                ],
+                "psr-4": {
+                    "Fusion\\Tests\\": "tests/",
+                    "App\\": "workbench/app/"
+                }
+            },
+            "scripts": {
+                "post-autoload-dump": [
+                    "@clear",
+                    "@prepare"
+                ],
+                "clear": [
+                    "@php vendor/bin/testbench package:purge-skeleton --ansi"
+                ],
+                "prepare": [
+                    "@php vendor/bin/testbench package:discover --ansi"
+                ],
+                "serve": [
+                    "Composer\\Config::disableProcessTimeout",
+                    "@php vendor/bin/testbench serve --ansi"
+                ],
+                "dev": []
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aarondfrancis@gmail.com"
+                }
+            ],
+            "description": "A Laravel package to bridge the gap between Laravel and Vue/React.",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "graham-campbell/result-type",
@@ -8346,8 +8421,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": {},
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "fusionphp/fusion": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
