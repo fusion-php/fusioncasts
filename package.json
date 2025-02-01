@@ -6,7 +6,7 @@
         "dev": "vite"
     },
     "devDependencies": {
-        "@fusion/vue": "file:vendor/fusion/fusion/packages/vue",
+        "@fusion/vue": "file:vendor/fusionphp/fusion/packages/vue",
         "@inertiajs/vue3": "^2.0.0",
         "@tailwindcss/forms": "^0.5.3",
         "@vitejs/plugin-vue": "^5.0.0",
