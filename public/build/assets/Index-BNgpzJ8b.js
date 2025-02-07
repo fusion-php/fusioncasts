@@ -1,0 +1,1 @@
+import{P as o,A as s}from"./ActionFactory-Dp4T4X28.js";import{t as a,u as c}from"./app-Cpi5aQzw.js";const i=["fusionSync"];function r(t={}){const n=new o(t).createState();return{...n,...new s(i,n)}}const l={__name:"Index",setup(t){const n=r(t.fusion),{name:e,fusionSync:u}=n;return(f,_)=>" Hello "+a(c(e))+"! "}};export{l as default};

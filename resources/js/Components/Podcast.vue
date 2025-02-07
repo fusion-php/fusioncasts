@@ -2,7 +2,7 @@
   <div class="tracking-tight leading-4">
     <h1 class="text-xl font-semibold text-zinc-900 truncate">{{ title }}</h1>
     <h4 class="text-zinc-600 truncate">{{ author }}</h4>
-    <img :src="imgSrc" class="w-full mt-2.5 rounded-lg shadow" />
+    <img :src="image" class="w-full mt-2.5 rounded-lg shadow" />
     <div class="flex gap-3 md:gap-5 mt-2 text-zinc-500">
       <button @click="$emit('favorited')">
         <svg
@@ -71,15 +71,10 @@
 <script>
 export default {
   props: {
-    imgSrc: String,
+    image: String,
     title: String,
     author: String,
     favorited: Boolean,
-  },
-  computed: {
-    // favorited() {
-    //   return true
-    // },
   },
 }
 </script>

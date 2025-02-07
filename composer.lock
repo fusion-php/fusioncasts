@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f67133ef0e1564d87d37b02213e4632",
+    "content-hash": "a1a1259f2861f5ace6cf070ead6c85c4",
     "packages": [
         {
             "name": "brick/math",
@@ -586,8 +586,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "../duo",
-                "reference": "69c26ba4ac8efc3e9a370b8f5593713e97a5f738"
+                "url": "../fusion",
+                "reference": "9706c9c3edc9c521255ab2cdf4eca204c13af17b"
             },
             "require": {
                 "illuminate/console": "^11",

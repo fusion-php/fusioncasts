@@ -30,7 +30,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "../duo",
+            "url": "../fusion",
             "options": {
                 "symlink": true
             }
