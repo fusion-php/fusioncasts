@@ -2,11 +2,9 @@
 use function \Fusion\{prop};
 use \App\Models\Podcast;
 
-$a = 1;
-
-$podcast = prop()->fromRoute('podcast');
+$podcast = prop()->fromRoute(class: Podcast::class);
 </php>
 
 <template>
-  {{ podcast.title }}
+  Podcast: {{ podcast.title }}
 </template>

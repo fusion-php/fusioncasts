@@ -1,53 +1,95 @@
 {
-  "_ActionFactory-Dp4T4X28.js": {
-    "file": "assets/ActionFactory-Dp4T4X28.js",
+  "_ActionFactory-CxR8WDqu.js": {
+    "file": "assets/ActionFactory-CxR8WDqu.js",
     "name": "ActionFactory",
     "imports": [
       "resources/js/app.js"
     ]
   },
+  "_LoadingIcon-BiEjogxN.js": {
+    "file": "assets/LoadingIcon-BiEjogxN.js",
+    "name": "LoadingIcon",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Class/Index.vue": {
+    "file": "assets/Index-Dvpf234h.js",
+    "name": "Index",
+    "src": "resources/js/Pages/Class/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ActionFactory-CxR8WDqu.js",
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Class/Search.vue": {
+    "file": "assets/Search-BY3nPMom.js",
+    "name": "Search",
+    "src": "resources/js/Pages/Class/Search.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_LoadingIcon-BiEjogxN.js",
+      "resources/js/app.js",
+      "_ActionFactory-CxR8WDqu.js"
+    ]
+  },
+  "resources/js/Pages/Class/[Podcast].vue": {
+    "file": "assets/_Podcast_-D7BWu2kv.js",
+    "name": "_Podcast_",
+    "src": "resources/js/Pages/Class/[Podcast].vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ActionFactory-CxR8WDqu.js",
+      "resources/js/app.js"
+    ]
+  },
   "resources/js/Pages/Index.vue": {
-    "file": "assets/Index-BNgpzJ8b.js",
+    "file": "assets/Index-D3hJerIt.js",
     "name": "Index",
     "src": "resources/js/Pages/Index.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ActionFactory-Dp4T4X28.js",
+      "_ActionFactory-CxR8WDqu.js",
       "resources/js/app.js"
     ]
   },
   "resources/js/Pages/Search.vue": {
-    "file": "assets/Search-C7BOKho7.js",
+    "file": "assets/Search-Ch2F6mEG.js",
     "name": "Search",
     "src": "resources/js/Pages/Search.vue",
     "isDynamicEntry": true,
     "imports": [
+      "_LoadingIcon-BiEjogxN.js",
       "resources/js/app.js",
-      "_ActionFactory-Dp4T4X28.js"
+      "_ActionFactory-CxR8WDqu.js"
     ]
   },
   "resources/js/Pages/[Podcast].vue": {
-    "file": "assets/_Podcast_-taHanK8C.js",
+    "file": "assets/_Podcast_-BbGJzczO.js",
     "name": "_Podcast_",
     "src": "resources/js/Pages/[Podcast].vue",
     "isDynamicEntry": true,
     "imports": [
-      "_ActionFactory-Dp4T4X28.js",
+      "_ActionFactory-CxR8WDqu.js",
       "resources/js/app.js"
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-Cpi5aQzw.js",
+    "file": "assets/app-CHlnL4AQ.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "dynamicImports": [
+      "resources/js/Pages/Class/Index.vue",
+      "resources/js/Pages/Class/Search.vue",
+      "resources/js/Pages/Class/[Podcast].vue",
       "resources/js/Pages/Index.vue",
       "resources/js/Pages/Search.vue",
       "resources/js/Pages/[Podcast].vue"
     ],
     "css": [
-      "assets/app-DapubZrh.css"
+      "assets/app-DWBe9dDr.css"
     ]
   }
 }

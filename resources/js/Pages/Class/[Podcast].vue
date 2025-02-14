@@ -10,5 +10,5 @@ new class {
 </php>
 
 <template>
-  {{ podcast.title }}
+  Title: {{ podcast.title }}
 </template>

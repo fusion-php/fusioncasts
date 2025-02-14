@@ -17,7 +17,6 @@ class SearchGenerated extends \Fusion\FusionPage
         $search = $this->prop(name: 'search', default: '')->value();
         $podcasts = $this->prop(name: 'podcasts', default: function () use ($search) {
             if ($search) {
-                sleep(1);
                 return Podcast::query()->where('title', 'like', "%{$search}%")->get();
             }
             return Podcast::all();

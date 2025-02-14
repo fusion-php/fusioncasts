@@ -29,11 +29,8 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "../fusion",
-            "options": {
-                "symlink": true
-            }
+            "type": "vcs",
+            "url": "https://github.com/fusion-php/fusion.git"
         }
     ],
     "autoload": {

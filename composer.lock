@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1a1259f2861f5ace6cf070ead6c85c4",
+    "content-hash": "0f802715c6b1403d0460cc1b6388cbd4",
     "packages": [
         {
             "name": "brick/math",
@@ -584,10 +584,16 @@
         {
             "name": "fusionphp/fusion",
             "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fusion-php/fusion.git",
+                "reference": "4e2c8437d1ab68af7ae8151d5bc33cd579ca27f1"
+            },
             "dist": {
-                "type": "path",
-                "url": "../fusion",
-                "reference": "9706c9c3edc9c521255ab2cdf4eca204c13af17b"
+                "type": "zip",
+                "url": "https://api.github.com/repos/fusion-php/fusion/zipball/4e2c8437d1ab68af7ae8151d5bc33cd579ca27f1",
+                "reference": "4e2c8437d1ab68af7ae8151d5bc33cd579ca27f1",
+                "shasum": ""
             },
             "require": {
                 "illuminate/console": "^11",
@@ -602,6 +608,7 @@
                 "orchestra/testbench": "^9.5",
                 "phpunit/phpunit": "^10.5|^11"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -611,14 +618,14 @@
                 }
             },
             "autoload": {
+                "files": [
+                    "functions.php"
+                ],
                 "psr-4": {
                     "Fusion\\": "src/"
                 }
             },
             "autoload-dev": {
-                "files": [
-                    "functions.php"
-                ],
                 "psr-4": {
                     "Fusion\\Tests\\": "tests/",
                     "App\\": "workbench/app/"
@@ -651,10 +658,21 @@
                 }
             ],
             "description": "A Laravel package to bridge the gap between Laravel and Vue/React.",
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/fusion-php/fusion/tree/main",
+                "issues": "https://github.com/fusion-php/fusion/issues"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/aarondfrancis"
+                },
+                {
+                    "type": "custom",
+                    "url": "https://aaronfrancis.com/backstage"
+                }
+            ],
+            "time": "2025-02-14T19:48:11+00:00"
         },
         {
             "name": "graham-campbell/result-type",

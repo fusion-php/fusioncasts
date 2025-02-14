@@ -1,1 +1,0 @@
-import{P as o,A as a}from"./ActionFactory-Dp4T4X28.js";import{t as e,u as c}from"./app-Cpi5aQzw.js";const i=["fusionSync"];function r(n={}){const t=new o(n).createState();return{...t,...new a(i,t)}}const l={__name:"[Podcast]",setup(n){const t=r(n.fusion),{podcast:s,fusionSync:u}=t;return(f,_)=>e(c(s).title)}};export{l as default};

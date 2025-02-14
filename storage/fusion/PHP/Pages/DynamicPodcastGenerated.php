@@ -14,8 +14,7 @@ class DynamicPodcastGenerated extends \Fusion\FusionPage
     use \Fusion\Concerns\IsProceduralPage;
     public function runProceduralCode()
     {
-        $a = 1;
-        $podcast = $this->prop(name: 'podcast')->fromRoute('podcast')->value();
+        $podcast = $this->prop(name: 'podcast')->fromRoute(class: Podcast::class)->value();
         $this->syncProps(get_defined_vars());
     }
 }

@@ -14,6 +14,7 @@ class IndexGenerated extends \Fusion\FusionPage
     public function runProceduralCode()
     {
         $name = $this->prop(name: 'name', default: 'Aaron')->value();
+        // All props are "tracked".
         $name = strtoupper($name);
         $this->syncProps(get_defined_vars());
     }

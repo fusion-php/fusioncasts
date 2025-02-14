@@ -1,22 +1,22 @@
 <php>
-use function \Fusion\{prop, expose};
 use \App\Models\Podcast;
 
-$search = prop('');
-$podcasts = prop(function() use ($search) {
-    if ($search) {
-        sleep(1);
-        return Podcast::query()
-            ->where('title', 'like', "%$search%")
-            ->get();
+new class {
+    public string $search = '';
+
+    #[\Fusion\Attributes\IsReadOnly]
+    public \Illuminate\Support\Collection $podcasts;
+
+    public function mount() {
+          $this->podcasts = $this->search
+            ? Podcast::query()->where('title', 'like', "%{$this->search}%")->get()
+            : Podcast::all();
     }
-    return Podcast::all();
-})->readonly();
 
-expose(favorite: function(Podcast $podcast) {
-    return response()->json($podcast->toggleFavorite());
-});
-
+    public function favorite(Podcast $podcast) {
+        return response()->json($podcast->toggleFavorite());
+    }
+}
 </php>
 
 <template>
@@ -31,16 +31,17 @@ expose(favorite: function(Podcast $podcast) {
           placeholder="Search podcasts"
         />
         <button
-          @click='fusionSync'
+          @click='fusion.sync'
           class="bg-blue-500 hover:bg-blue-600 text-white rounded-md w-24 flex items-center justify-center cursor-pointer"
         >
-          <LoadingIcon v-if="fusionSync.inProgress" />
+          <LoadingIcon v-if="fusion.sync.processing" />
           <span v-else>Search</span>
         </button>
       </div>
     </div>
 
     <div class="grid grid-cols-3 gap-6">
+      <!-- @TODO show how you can import it, instead of just doing it inline -->
       <Podcast
         v-for="podcast in podcasts"
         :key="podcast.id"

@@ -1,3 +1,5 @@
 <?php
 
-\Fusion\Fusion::path(resource_path('js/Pages'));
+use Fusion\Fusion;
+
+Fusion::pages();
