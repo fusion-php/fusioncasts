@@ -20,7 +20,7 @@ new class {
 </php>
 
 <template>
-  <Head title="Home" />
+  <Head title="Search" />
   <div class="p-6 max-w-4xl mx-auto">
     <div class='mb-6'>
       <div class="flex gap-2">

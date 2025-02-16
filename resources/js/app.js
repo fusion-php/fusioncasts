@@ -10,7 +10,7 @@ import fusion from '@fusion/vue/vue';
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
-  title: (title) => `Fusion`,
+  title: (title) => `Fusion ${title}`,
   resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
 
   setup({el, App, props, plugin}) {
