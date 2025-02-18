@@ -61,6 +61,12 @@ class PodcastSeeder extends Seeder
             'title' => 'The Nathan Barry Show',
             'author' => 'Nathan Barry',
             'favorited' => false,
+        ], [
+            'id' => 9,
+            'image' => '/art/syntax.jpg',
+            'title' => 'Syntax',
+            'author' => 'Wes Bos & Scott Tolinski',
+            'favorited' => false,
         ]];
 
         foreach ($podcasts as $podcast) {
