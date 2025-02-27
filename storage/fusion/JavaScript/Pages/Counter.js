@@ -2,8 +2,8 @@ import Pipeline from '@fusion/vue/pipeline';
 import ActionFactory from '@fusion/vue/actionFactory';
 
 
-export const state = ["podcast"];
-export const actions = ["changePodcastTitle"];
+export const state = ["count"];
+export const actions = ["add"];
 export const fusionActions = ["fusionSync"];
 
 let cachedState;

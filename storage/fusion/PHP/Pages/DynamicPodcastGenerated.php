@@ -7,6 +7,7 @@
 namespace Fusion\Generated\Pages;
 
 use App\Models\Podcast;
+use Illuminate\Support\Str;
 class DynamicPodcastGenerated extends \Fusion\FusionPage
 {
     #[\Fusion\Attributes\ServerOnly]
@@ -14,7 +15,16 @@ class DynamicPodcastGenerated extends \Fusion\FusionPage
     use \Fusion\Concerns\IsProceduralPage;
     public function runProceduralCode()
     {
-        $podcast = $this->prop(name: 'podcast')->fromRoute(class: Podcast::class)->value();
+        $podcast = $this->prop(name: 'podcast')->fromRoute(class: Podcast::class)->readonly()->value();
+        $this->expose(changePodcastTitle: function () use ($podcast) {
+            $podcast->title = Str::random(10);
+            $podcast->save();
+        });
         $this->syncProps(get_defined_vars());
+    }
+    #[\Fusion\Attributes\Expose]
+    public function changePodcastTitle()
+    {
+        return call_user_func($this->actions[__FUNCTION__], ...func_get_args());
     }
 }
